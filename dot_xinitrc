@@ -1,0 +1,16 @@
+sleep 2 && {
+ exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+ vmware-user &
+ feh --bg-fill ~/Downloads/back.png &
+ picom &
+ greenclip daemon
+} &
+
+xset r rate 300 40
+setxkbmap -option caps:none
+
+# start i3
+
+xrdb <(echo "Xcursor.size: 24")
+
+exec i3

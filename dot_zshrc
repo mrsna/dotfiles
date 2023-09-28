@@ -1,0 +1,45 @@
+# Created by newuser for 5.9
+autoload -U promptinit; promptinit; 
+autoload -U compinit bashcompinit
+compinit
+bashcompinit
+zstyle ':completion:*' menu yes select
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' rehash true
+
+autoload -U select-word-style
+select-word-style bash
+
+setopt auto_cd
+setopt HIST_IGNORE_SPACE
+setopt interactive_comments
+setopt inc_append_history
+setopt share_history
+setopt AUTO_PUSHD          
+setopt PUSHD_IGNORE_DUPS    
+setopt PUSHD_SILENT         
+
+if [[ -t 0 && $- = *i* ]]
+then
+    stty -ixon
+fi 
+
+unset histchars
+
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000000
+SAVEHIST=10000000
+
+
+eval "$(starship init zsh)"
+bindkey "^[[3~" delete-char
+
+alias lol="asciiquarium | lolcat"
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=( end-of-line )
+ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=( end-of-line )
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

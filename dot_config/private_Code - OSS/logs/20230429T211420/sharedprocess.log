@@ -1,0 +1,5 @@
+2023-04-29 21:14:27.131 [info] Started initializing default profile extensions in extensions installation folder. file:///home/silas/.vscode-oss/extensions
+2023-04-29 21:14:28.491 [info] Starting worker process with pid 8952 (type: fileWatcher, window: 1).
+2023-04-29 21:14:29.126 [warning] Failed to create default profile extensions manifest in extensions installation folder. file:///home/silas/.vscode-oss/extensions Unable to create file 'vscode-userdata:/home/silas/.vscode-oss/extensions/extensions.json' that already exists when overwrite flag is not set
+2023-04-29 21:14:29.126 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/silas/.vscode-oss/extensions
+2023-04-29 21:14:31.928 [warning] No ptyHost heartbeat after 6 seconds
