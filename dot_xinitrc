@@ -3,6 +3,7 @@ sleep 2 && {
  vmware-user &
  feh --bg-fill ~/Downloads/back.png &
  picom &
+ nm-applet &
  greenclip daemon
 } &
 
