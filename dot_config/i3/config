@@ -12,6 +12,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -display-drun '🗃️'
 #bindsym $mod+p exec --no-startup-id "ulauncher-toggle && xdotool sleep 0.1 type 'c '"
 bindsym $mod+p exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+# start rofimoji (a emoji search app)
+bindsym $mod+m exec rofi -modi "emoji:rofimoji" -show emoji
 
 # start joplin (note taking app)
 bindsym $mod+j exec --no-startup-id "MESA_GL_VERSION_OVERRIDE=3.1COMPAT joplin-desktop"
