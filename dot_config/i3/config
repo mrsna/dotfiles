@@ -86,7 +86,7 @@ bar {
   font pango:MesloLGM Nerd Font Bold 13
   position top
   tray_output primary
-  status_command bumblebee-status -m indicator memory disk load cpu2 datetime \
+  status_command bumblebee-status -m pipewire indicator memory disk load cpu2 datetime traffic \
       -p interval="0.5" \
       -p cpu2.interval="1" \
       -p cpu2.layout="cpu2.coresload" \
@@ -96,6 +96,8 @@ bar {
       -p shell.command="ps axf | grep '[g]reenclip daemon' | grep -o T &> /dev/null && echo '󱘝' || echo '󰅌'" \
       -p indicator.include="NumLock" \
       -p datetime.format="%a %d.%m %H:%M:%S" \
+      -p traffic.showname=true \
+      -p traffic.exclude=br-e126399352cb,docker,lo \
       -t moonlight-powerline
   i3bar_command i3bar -t
   colors {                                                                                                                              
