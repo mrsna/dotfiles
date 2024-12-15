@@ -33,14 +33,14 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 
 
-eval "$(starship init zsh)"
-bindkey "^[[3~" delete-char
 alias ls='ls --color=auto'
 alias ll='ls -larth --color=auto'
 alias vi='vim'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
+eval "$(starship init zsh)"
+bindkey "^[[3~" delete-char
 
 export EDITOR="vim"
 
