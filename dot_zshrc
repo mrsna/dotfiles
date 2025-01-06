@@ -24,6 +24,8 @@ then
     stty -ixon
 fi 
 
+bindkey -e
+
 unset histchars
 
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
@@ -40,6 +42,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init zsh)"
+
 bindkey "^[[3~" delete-char
 
 export EDITOR="vim"
