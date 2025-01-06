@@ -86,7 +86,7 @@ bar {
   font pango:MesloLGM Nerd Font Bold 13
   position top
   tray_output primary
-  status_command bumblebee-status -m pipewire indicator memory disk load cpu2 datetime traffic \
+  status_command bumblebee-status -m pipewire indicator memory disk load cpu2 traffic datetime \
       -p interval="0.5" \
       -p cpu2.interval="1" \
       -p cpu2.layout="cpu2.coresload" \
